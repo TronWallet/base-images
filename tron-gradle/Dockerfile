@@ -18,6 +18,5 @@ RUN curl -LO https://downloads.gradle.org/distributions/gradle-4.3-bin.zip \
     && unzip -d /opt/gradle gradle-4.3-bin.zip \
     && mv /opt/gradle/gradle-4.3/* /opt/gradle/ \
     && rm -rf /opt/gradle/gradle-4.3/
-    #&& chmod +x /usr/local/bin/gradle
 
 ENV PATH=$PATH:/opt/gradle/bin
