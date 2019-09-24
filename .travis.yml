@@ -3,7 +3,7 @@ services:
   - docker
 script:
 - |
-  changed=$(git diff --dirstat=files,0 HEAD~1 | awk '{ print $2 }' | grep -v circleci)
+  changed=$(git diff --dirstat=files,0 HEAD~1 | awk '{ print $2 }')
   for dir_name in $(ls -d */ | sed s'/.$//')
   do
   if echo $changed | grep -w $dir_name > /dev/null; then
