@@ -1,5 +1,5 @@
-FROM golang:1.13-alpine3.10
+FROM golang:1.14-alpine3.11
 
-# install OS dependencies and golang's dep
+# install OS dependencies and golangci-lint
 RUN apk add --no-cache bash git make curl gcc g++ musl-dev \
-    && curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+    && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.27.0
