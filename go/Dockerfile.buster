@@ -2,6 +2,6 @@ FROM golang:1.14-buster
 
 # install OS dependencies and golangci-lint
 RUN apt update \
-    && apt install -y bash git make curl gcc g++ \
+    && apt install -y bash git make curl gcc g++ ca-certificates \
     && go get golang.org/x/lint/golint \
     && go get github.com/mitchellh/gox
